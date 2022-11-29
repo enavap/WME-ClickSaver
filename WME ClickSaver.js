@@ -532,7 +532,7 @@
                         style: 'float: right;text-transform: none;'
                             + 'font-family: "Helvetica Neue", Helvetica, "Open Sans", sans-serif;color: #26bae8;'
                             + 'font-weight: normal;'
-                    }).text('Add alt city').click(onAddAltCityButtonClick)
+                  }).text(_trans.prefs.addAltCity).click(onAddAltCityButtonClick)
                 );
             }
         }
@@ -550,7 +550,7 @@
                     // TODO css
                     style: 'display:inline-block;cursor:pointer;'
                 });
-                $button.append('<i class="fa fa-blind fa-lg"></i><i class="fa fa-arrows-h fa-lg" style="color:#e84545"></i><i class="fa fa-car fa-lg"></i>')
+                $button.append('<i class="fa fa-blind fa-lg"></i><i class="fa fa-arrows-h fa-lg" style="color:#e84545"></i><i class="fa fa-car fa-lg"></i>')
                     .attr({
                         title: 'Swap between driving-type and walking-type segments.\nWARNING!'
                             + ' This will DELETE and recreate the segment.  Nodes may need to be reconnected.'
@@ -707,9 +707,9 @@
                         $('<div>', { style: 'margin-bottom:8px;' }).append(
                             // THIS IS CURRENTLY DISABLED
                             createSettingsCheckbox('csAddAltCityButtonCheckBox', 'addAltCityButton',
-                                'Show "Add alt city" button'),
+                                _trans.prefs.addAltCityButton),
                             isSwapPedestrianPermitted() ? createSettingsCheckbox('csAddSwapPedestrianButtonCheckBox',
-                                'addSwapPedestrianButton', 'Show "Swap driving<->walking segment type" button') : ''
+                                'addSwapPedestrianButton', _trans.prefs.addSwapPedestrianButton) : ''
                         )
                     )
                 )
