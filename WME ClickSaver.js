@@ -75,7 +75,10 @@
                 parkingCostButtons: 'Add PLA cost buttons',
                 parkingSpacesButtons: 'Add PLA estimated spaces buttons',
                 spaceSaversGroup: 'SPACE SAVERS',
-                discussionForumLinkText: 'Discussion Forum'
+                discussionForumLinkText: 'Discussion Forum',
+                addAltCity: 'Add Alt City',
+                addAltCityButton: 'Show "Add alt city" button',
+                addSwapPedestrianButton: 'Show "Swap driving<->walking segment type" button'
             }
         };
         const ROAD_TYPES = {
@@ -547,7 +550,7 @@
                     // TODO css
                     style: 'display:inline-block;cursor:pointer;'
                 });
-                $button.append('<span class="fa fa-arrows-h" style="font-size:20px; color:#e84545;"></span>')
+                $button.append('<i class="fa fa-blind fa-lg"></i><i class="fa fa-arrows-h fa-lg" style="color:#e84545"></i><i class="fa fa-car fa-lg"></i>')
                     .attr({
                         title: 'Swap between driving-type and walking-type segments.\nWARNING!'
                             + ' This will DELETE and recreate the segment.  Nodes may need to be reconnected.'
